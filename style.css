@@ -203,18 +203,39 @@ article #left{
     width:53%;
     background-image: url(https://images.unsplash.com/photo-1467632499275-7a693a761056?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-size: cover;
-
+    /* background-position: top; */
 }
 article #right{
     height: 100%;
     width:43%;
-    /* background-color: green; */
-
+    /* background-color: yellow; */
+}
+article .right-3,.left-3{
+    width:48% !important;
+}
+article .left-3{
+    background-image: url("https://scontent.fbho1-1.fna.fbcdn.net/v/t1.6435-9/71109929_1293100507525585_5560936153768525824_n.jpg?stp=dst-jpg_p720x720&_nc_cat=101&ccb=1-7&_nc_sid=810d5f&_nc_ohc=HPKM5bwRG5sAX-3x9Zu&_nc_ht=scontent.fbho1-1.fna&oh=00_AfAe-moGHzdC5SQ8eJcH5B1WQnlaY3XOcMl2mnvNGLMppg&oe=660D486F") !important;
+    background-position-y: 30%;
 }
 article #right img{
     height: 80%;
     width:100%;
     object-fit: cover;
+}
+#round-text{
+    height: 80%;
+    width:100%;
+    background-image: url(./circle-text.png);
+    background-size: cover;
+    background-position: center;
+    /* background-color: green; */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#round-text #arrow-image{
+    height: 10vh;
+    width:10vw
 }
 article #right #text{
     height: calc(100% - 80%);
@@ -222,24 +243,173 @@ article #right #text{
     display:flex;
     align-items: flex-end;
     justify-content:space-between;
+    /* background-color: yellow; */
 }
 article #right #text #text-left, #text-right{
     height: 100%;
     width:40%;
-    padding:2vh 0;
-    /* background-color: yellow; */ 
+    /* --============padding:2vh 0; have to handle-----======================== */
+    /* background-color: yellow;  */
 }
-article #right #text .text-left-2{
+article #right #text .gay{
+    width:53% !important;
+    /* background-color: rebeccapurple;  */
+}
+article #right #text .gay img{
+    height: 100%;
+    width:100%;
+    padding:0vh 0px !important;
+    object-fit: cover;
+}
+article #right #text .drug-addict{
+    width:43% !important;
+    /* background-color: crimson;  */
+}
+article #right #text .drug-addict img{
+    height: 100%;
+    width:100%;
+    padding:0vh 0px !important;
+    object-fit: cover;
+}
+
+article #right .right-bottom{
+    height: calc(100% - 50%) !important;
+    width:100%;
+}
+article #right #discription{
+    height: 50%;
+    /* background-color: green; */
+    display:flex;
+    flex-direction: column;
+    gap: 3.5vw;
+    /* justify-content:space-between; */
+}
+#discription h1{
+    font-size: 2.2vw;
+    /* line-height: 1.8vw; */
+    font-family: monument;
+}
+#discription h4{
+    font-size: 1.3vw;
+    line-height: 1.8vw;
+    color:#242222;
+    /* font-family: monument; */
+}
+
+.text-left-2{
     width:100% !important;
+}
+.left-2{
+    background-image: url("https://select-s3.agencypin.com/files/gallery/13381/expanded/gallery_model_Yt1DwxFe0h6N.jpg") !important;
+    background-position-y: 40% !important;
+}
+.left-4{
+    background-image: url("https://onemanagement.com/assets/2019-12-04/75335IMAGE12ab98b18757b.jpg") !important;
 }
 article #right #text #text-left h3{
     font-weight: 600;
 }
-
 #head{
     padding:0 3.6vw;
 }
 #head h2{
     text-transform: uppercase;
     font-family: monument;
+}
+#head h1{
+    text-transform: uppercase;
+    font-family: monument;
+    font-weight: 800;
+    text-align: center;
+    margin: 9vh 0;
+}
+figure{
+    height: 80%;
+    width: 100%;
+    padding:2vh 3.6vw;
+    margin-top:3vh;
+
+}
+figure #angrezi-ghagra{
+    height: 100%;
+    width: 100%;
+    padding:2vw;
+    background-image: url("https://www.selvedge.org/cdn/shop/products/107CoverDigitalNEW.jpg?v=1655850919&width=493");
+    background-size: 130%;
+    background-position: center;
+    background-position-y: 20%;
+    display:flex;
+    justify-content:flex-end;
+}
+figure #angrezi-ghagra h4,figure #niga h4{
+    height: 35px;
+    width: 35px;
+    font-weight: 300;
+    border:2px solid #000;
+    border-radius: 50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#categories{
+    height: 80%;
+    width:100%;
+    /* background-color:yellow; */
+    padding:2vh 3.6vw;
+}
+#categories #elem{
+    height: 25%;
+    border-bottom:2px solid black;
+    display:flex;
+    align-items:center;
+    position:relative;
+    justify-content:space-between;
+}
+#categories #elem:nth-child(1) {
+    border-top:2px solid black;
+}
+#categories #elem h4{
+    font-weight: 500;
+    font-size:1.4vw;
+}
+#categories #elem #by{
+    height: 100%;
+    width:50%;
+    /* background-color: rebeccapurple; */
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    flex-direction: column;
+}
+#elem #by h2{
+    font-size:2.5vw;
+    font-weight: 500;
+}
+#categories #elem img{
+    height: 100%;
+    border-radius: 50%;
+    position:absolute;
+    left:5%;
+    opacity: 0;
+    transition: all ease .3s;
+}
+#categories #elem:nth-child(2n) img{
+    left:28%;
+}
+#categories #elem:hover img{
+    opacity: 1;
+    left:20%;
+}
+
+
+figure #niga{
+    height: 100%;
+    width: 100%;
+    padding:2vw;
+    background-image: url("https://www.selvedge.org/cdn/shop/products/107CoverDigitalNEW.jpg?v=1655850919&width=493");
+    background-size: 130%;
+    background-position: center;
+    background-position-y: 20%;
+    display:flex;
+    justify-content:flex-end;
 }
