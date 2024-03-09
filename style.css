@@ -38,6 +38,32 @@ nav h1{
     align-items:center;
     justify-content:center;
     letter-spacing: -2px;
+    position: relative;
+}
+nav h1::after{
+    content: "c";
+    position:absolute;
+    right:10%;
+    top:20%;
+    font-size: .9vw;
+    font-weight: 300;
+    height:15px;
+    width:15px;
+    border-radius:50%;
+    border:2px solid #000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+nav h1::before{
+    content: "model management";
+    position:absolute;
+    right:17%;
+    bottom:15%;
+    font-size: .7vw;
+    font-weight: 300;
+    font-family: gilroy;
+    letter-spacing: .1vw;
 }
 nav h2{
     height:100%;
@@ -49,11 +75,15 @@ nav h2{
     justify-content:center;
     border-right:2px solid #000;   
 }
-nav h2:nth-last-child(1){
+nav #menu{
+    display:none;
+    /* background-color:green; */
+}
+nav h2:nth-last-child(2){
     width:10%;
     /* background-color: green; */
 }
-nav h2:nth-last-child(2){
+nav h2:nth-last-child(3){
     width:29%;
 }
 
@@ -209,6 +239,9 @@ article #right{
     height: 100%;
     width:43%;
     /* background-color: yellow; */
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
 }
 article .right-3,.left-3{
     width:48% !important;
@@ -238,7 +271,7 @@ article #right img{
     width:10vw
 }
 article #right #text{
-    height: calc(100% - 80%);
+    height: calc(100% - 83%);
     width:100%;
     display:flex;
     align-items: flex-end;
@@ -315,6 +348,7 @@ article #right #text #text-left h3{
 #head h2{
     text-transform: uppercase;
     font-family: monument;
+    font-size: 2.5vw;
 }
 #head h1{
     text-transform: uppercase;
@@ -406,10 +440,480 @@ figure #niga{
     height: 100%;
     width: 100%;
     padding:2vw;
-    background-image: url("https://www.selvedge.org/cdn/shop/products/107CoverDigitalNEW.jpg?v=1655850919&width=493");
-    background-size: 130%;
+    background-image: url("https://scontent.fbho1-4.fna.fbcdn.net/v/t39.30808-6/418443730_18334938646097877_1666193811905891239_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=OHlItmZWu60AX-y2rxr&_nc_ht=scontent.fbho1-4.fna&oh=00_AfCaprOHgTIJdAVGLEnnENgtb8jcBfshMrsH1IAyJWJIgg&oe=65F19569");
+    /* background-size: 130%; */
     background-position: center;
-    background-position-y: 20%;
+    background-position-y: 5%;
     display:flex;
     justify-content:flex-end;
+}
+
+#marquee{
+    /* height: 20vh; */
+    width:100%;
+    padding:2vh 2vw;
+    /* background-color: green; */
+    white-space: nowrap;
+    border-top:2px solid #000;
+    border-bottom:2px solid #000;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 2vw 0;
+}
+#marquee h1{
+    display:inline-block;
+    font-size: 3.5vw;
+    /* background-color: yellow; */
+    -webkit-text-stroke:2px black;
+    color:transparent;
+    margin-right: 16px;
+    font-family: monument;
+    letter-spacing: .5vw;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+#testimonial{
+    height: 100vh;
+    display: flex;
+    padding:4vw;
+    gap:7vw;
+    /* background-color: rebeccapurple; */
+}
+#testimonial #bolg-head h1{
+    font-family: monument;
+    font-size: 2.3vw;
+}
+#testimonial #bolg-head h1::after{
+    
+}
+#testimonial .blog{
+    width:40%;
+    /* background-color: green; */
+}
+#testimonial .blog p{
+    font-size: 1.3vw;
+    font-weight: 600;
+    margin-bottom:40px;
+    line-height: 2vw;
+}
+#testimonial .blog p span{
+    padding:3px 10px;
+    border:2px solid #000;
+    border-radius: 25px;
+    font-weight: 500;
+}
+#testimonial .blog img{
+    width:100%;
+    height:50vh;
+    object-fit:cover;
+    object-position: top;
+}
+#testimonial #blog2 img{
+    object-fit:cover;
+    object-position: bottom;
+}
+
+footer{
+    height: 30vh;
+    display: grid;
+    border-top:2px solid #000;
+    border-bottom:2px solid #000;
+    grid-template-columns: 2fr 1fr 2fr;
+    /* margin-bottom:150px; */
+}
+footer .elem{
+    border-right:2px solid #000;
+    
+}
+footer .elem:nth-last-child(1){
+    border-right:none;
+}
+footer .elem #align{
+    height: 32%;
+    display:flex;
+    align-items:center;
+    padding:2vh 3.6vw;
+    justify-content:space-between;
+    /* background-color: yellow; */
+}
+footer .elem:nth-last-child(1) #align{
+    border-bottom:2px solid #000;
+}
+#align h1{
+    font-size: 35px;
+    font-weight: 600;
+    font-family: monument;
+    position: relative;
+}
+#align h1::after{
+    content: "c";
+    position:absolute;
+    right:-10%;
+    top:0;
+    font-size: .9vw;
+    font-weight: 300;
+    height:15px;
+    width:15px;
+    border-radius:50%;
+    border:2px solid #000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#align h1::before{
+    content: "model management";
+    position:absolute;
+    right:0%;
+    bottom:-10%;
+    font-size: .8vw;
+    font-weight: 300;
+    font-family: gilroy;
+}
+#align h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #5a5252;
+}
+footer #elem3 #connect{ 
+    height: calc(100% - 32%);
+    padding:2vh 3.6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#elem3 #connect #social-icons{
+    display:flex;
+    gap:1.5vw;
+}
+#elem3 #connect #social-icons i{
+    font-size: 1.26vw;
+}
+#elem3 #connect #copy p{
+    font-size: 1vw;
+    font-weight: 600;
+    color: #5a5252;
+}
+
+@media (max-width:600px) {
+    nav{
+        height: 7vh;
+    }
+    nav h1{
+        width:40%;
+        font-size: 8vw;
+        font-weight: 600;
+        letter-spacing: -3px;
+    }
+    nav h1::after{
+        right:10%;
+        top:24%;
+        font-size: 3vw;
+        height:10px;
+        width:10px; 
+    }
+    nav h1::before{
+        right:17%;
+        bottom:9%;
+        font-size: 2.2vw;
+        letter-spacing: .1vw;
+    }
+    nav h2{
+        display:none;
+    }
+    nav #menu{
+        display: initial;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    /* =====----------video section start-----------===== */
+
+    section{
+        height: 50%;
+    }
+    .content #overlay{
+        height:30%;
+    }
+    #over1 h2{
+        font-size: 5vw;    
+    }
+    #over1 h3{
+        font-size: 4vw;
+    }
+    #over2 h4{
+        font-size: 3vw;
+    }
+    #over2 img{
+        height: 5vh; 
+    }
+
+    /* =====----------scroll section start-----------===== */
+
+
+    #scroll{
+        margin-top:3vw;
+        height: 12vh;
+    }
+    #scroll #container{
+        width:150%;
+    }
+
+    /* =====----------alphabet section start-----------===== */
+
+    #alphabets{
+        margin-top: 3vh;
+        height: 8vh;
+        gap:0px;
+    }
+    #alphabets h5{
+        font-size: 3vw;
+        font-weight: 600;
+        margin-right: 1vw;
+    }
+    #alphabets h6{
+        font-size: 2vw;
+        color:#050505;
+        font-weight: 600;
+    }
+    #alphabets h6:hover{
+        border-color: #000;
+    }
+
+    /* =====----------article 1 section start-----------===== */
+
+    article{
+        height: 100vh;
+        margin-top:6vw;
+        flex-direction: column;
+        justify-content:flex-start;
+        padding:3vw 3.6vw;
+        /* background-color: green; */
+    }
+    article #left{
+        height: 35%;
+        width:100%;
+    }
+    article #right{
+        height: 45%;
+        width:100%;
+        flex-direction: column;
+        justify-content:flex-start;
+        gap:2vh;
+        margin-bottom:30px;
+    }
+    article .right-3,.left-3{
+        width:100% !important;
+        height:50% !important   ;
+    }
+    #round-text #arrow-image{
+        height: 8vh;
+        width:15vw
+    }
+    
+
+    #discription h1{
+        margin-top:2vh;
+        font-size: 6vw;
+    }
+    #discription h4{
+        font-size: 3.2vw;
+        line-height: 3.5vw;
+    }
+    #discription p{
+        font-size:2.7vw;
+    }
+    .text-left-2{
+        width:100% !important;
+    }
+
+    /* =====----------first heading  start-----------===== */
+
+    
+    #head h2{
+        font-weight: 800;
+        font-size: 6vw;
+    }
+    #head h1{
+        text-transform: uppercase;
+        font-family: monument;
+        font-weight: 800;
+        text-align: center;
+        margin: 3vh 0;
+    }
+
+    /* =====----------first figure  start-----------===== */
+    figure{
+        height: 33%;
+        width: 100%;
+        padding:0vh 3.6vw;
+        margin-top:0vh;
+    
+    }
+    figure #angrezi-ghagra{
+        height: 100%;
+        width: 100%;
+        padding:2vw;
+        background-image: url("https://www.selvedge.org/cdn/shop/products/107CoverDigitalNEW.jpg?v=1655850919&width=493");
+        background-size: 130%;
+        background-position: center;
+        background-position-y: 20%;
+        display:flex;
+        justify-content:flex-end;
+    }
+    figure #angrezi-ghagra h4,figure #niga h4{
+        height: 35px;
+        width: 35px;
+        font-weight: 300;
+        border:2px solid #000;
+        border-radius: 50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    /* =====----------categories section start-----------===== */
+
+    #categories{
+        height: 50%;
+        padding:2vh 3.6vw;
+    }
+
+    #categories #elem h4{
+        font-size:3vw;
+    }
+    #categories #elem #by{
+        width:35%;
+    }
+    #elem #by h2{
+        font-size:2.5vw;
+    }
+    #elem #by p{
+        font-size: 1.8vw;
+    }
+
+
+    /* =====----------testimonial section start-----------===== */
+
+    #testimonial{
+        height: auto;
+        flex-direction: column;
+        padding:4vw;
+        gap:3vw;
+    }
+    #testimonial #bolg-head h1{
+        font-size: 7vw;
+        font-weight: 800;
+    }
+    #testimonial .blog{
+        width:100%;
+        /* background-color: green; */
+    }
+    #testimonial .blog p{
+        font-size: 2.5vw;
+        font-weight: 600;
+        line-height: 5vw;
+    }
+
+    /* =====----------footer section start-----------===== */
+
+
+    footer{
+        height: 30vh;
+        display: grid;
+        border-top:2px solid #000;
+        border-bottom:2px solid #000;
+        grid-template-columns: 1fr;
+        grid-template-rows: 7vh 5vh 20vh
+        /* margin-bottom:150px; */
+    }
+    footer .elem{
+        border-right:2px solid #000;
+        
+    }
+    footer .elem:nth-last-child(1){
+        border-right:none;
+    }
+    footer .elem #align{
+        height: 32%;
+        display:flex;
+        align-items:center;
+        flex-direction: column;
+        padding:2vh 3.6vw;
+        justify-content:space-between;
+        /* background-color: yellow; */
+    }
+    footer .elem:nth-last-child(1) #align{
+        border-bottom:2px solid #000;
+    }
+    #align h1{
+        font-size: 35px;
+        font-weight: 600;
+        font-family: monument;
+        position: relative;
+    }
+    #align h1::after{
+        content: "c";
+        position:absolute;
+        right:-10%;
+        top:0;
+        font-size: 3vw;
+        font-weight: 600;
+        height:15px;
+        width:15px;
+        border-radius:50%;
+        border:2px solid #000;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    #align h1::before{
+        content: "model management";
+        position:absolute;
+        right:0%;
+        bottom:-10%;
+        font-size: 2vw;
+        font-weight: 300;
+        font-family: gilroy;
+    }
+    #align h4{
+        font-size: 3vw;
+        font-weight: 600;
+        color: #5a5252;
+    }
+    footer #elem3 #connect{ 
+        height: calc(100% - 32%);
+        padding:2vh 3.6vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #elem3 #connect #social-icons{
+        display:flex;
+        gap:1.5vw;
+    }
+    #elem3 #connect #social-icons i{
+        font-size: 7vw;
+    }
+    #elem3 #connect #copy p{
+        font-size: 3.2vw;
+        font-weight: 600;
+        color: #5a5252;
+        margin-bottom: 1vh;
+    }
+    
+
+    
 }
